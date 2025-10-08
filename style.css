@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor-azul: rgb(255, 0, 0);
+    --cor-nome: rgba(255, 0, 0, 0.4);
+    --cor-branca: white;
+    --cor-preta: black;
+    --transtition-color: color 0.3s ease-in;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth; /* Suaviza a rolagem para âncoras */
+}
+
+body{
+    background-color:black;
+}
+
+h1, h2, h3, h4, h5, h6, span, p, li {
+    color: white;
+}
+
+.cor-preta {
+    color: rgba(0, 0, 0, 0.548);
+}
+
+summary {
+    transition: var(--transtition-color);
+}
+
+summary:hover {
+    color: var(--cor-azul)
+}
+
+div {
+    display: flex;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Espaço entre a foto e o texto */
+}
+
+#foto {
+    border-radius: 14px;
+}
+
+summary{
+    list-style: none;
+}
+
+details {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 3rem;
+    height: 100vh;
+}
+
+ul {
+    width: 100%;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+#foto {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+#foto:hover {
+    box-shadow: 0 0 8px 5px rgba(255, 0, 0, 0.4);
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    gap: 2rem;
+    padding: 0 4rem;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    height: 100%;
+}
+
+.detalhes ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-me {
+    margin: auto 0;
+    transform: translateY(-2rem);
+}
+
+#nome :hover{
+    background-color: var(--cor-nome); 
+}
+#meu-nome :hover {
+    color: var(--cor-nome);
+}
+/* Estilo para o Cursor */
+.cursor {
+    font-weight: 100; /* Deixa o cursor mais fino */
+    margin-left: 2px;
+    animation: blink 0.75s infinite; /* Chama a animação 'blink' */
+}
+
+/* Define a animação de piscar do cursor */
+@keyframes blink {
+    0%, 100% { 
+        opacity: 1; /* Totalmente visível */
+    }
+    50% { 
+        opacity: 0; /* Invisível */
+    }
+}
+/* Definições de cores padrão (Tema Escuro) */
+:root {
+    --cor-destaque: rgb(255, 0, 0); 
+    --cor-fundo: black;
+    --cor-texto: white;
+    --cor-detalhe-fundo: #222; /* Uma cor para detalhes ou elementos que não são o fundo principal */
+    --transition-color: color 0.3s ease-in; 
+}
+
+/* Definições de cores para o Modo Claro */
+.light-mode {
+    --cor-fundo: rgb(255, 255, 255);
+    --cor-texto: black;
+    --cor-detalhe-fundo: #f0f0f0; 
+}
+
+/* Aplicando as variáveis (Atualize ou verifique suas regras) */
+
+/* ... (Seu reset e import) ... */
+
+body {
+    /* ... (suas regras de layout) ... */
+    background-color: var(--cor-fundo); /* Usando a nova variável */
+    transition: background-color 0.5s ease-in-out; 
+}
+
+h1, h2, h3, h4, h5, h6, span, p, li {
+    color: var(--cor-texto); /* Usando a nova variável */
+}
+
+/* Opcional: Estilize os elementos <details> para o modo claro/escuro */
+.detalhes ul li details {
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+
+.light-mode .detalhes ul li details {
+    /* Exemplo: Um fundo levemente diferente para os detalhes no modo claro */
+    background-color: var(--cor-detalhe-fundo);
+    padding: 10px;
+    border-radius: 5px;
+}
